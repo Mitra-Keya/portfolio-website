@@ -108,7 +108,7 @@
     <section id="home" class="section hero fade-in">
       <div class="hero-inner">
         <div class="hero-text">
-          <h1>Hi, I'm <span class="accent">Keya Mitra</span> 👋</h1>
+          <h1>Hi, I'm <span class="accent">Keya Mitra</span></h1>
           <p class="subtitle">Aspiring Software Engineer | Full-stack Developer & AI/ML Enthusiast</p>
           <p class="summary">
             I build web apps and ML tools that solve real problems — from recipe recommendation to
@@ -230,26 +230,40 @@
     <section id="projects" class="section projects fade-in">
       <h2 class="section-title">Projects</h2>
 
-      <!-- Project Template -->
+      <!-- Project 1 -->
       <article class="project-card fade-in">
-        <img src="assets/images/project1-thumb.png" alt="Recipe Recommender Screenshot" class="project-thumb">
+        <!-- Thumbnail -->
+        <img src="assets/images/project1-thumb.png" alt="Recipe Recommender Screenshot"
+          class="project-thumb" loading="lazy">
+
+        <!-- Header -->
         <div class="project-header">
           <h3>Recipe Recommender</h3>
           <div class="badges">
-            <span class="badge">HTML</span><span class="badge">CSS</span>
-            <span class="badge">JavaScript</span><span class="badge">PHP</span>
+            <span class="badge" data-tech="HTML">HTML</span>
+            <span class="badge" data-tech="CSS">CSS</span>
+            <span class="badge" data-tech="JavaScript">JavaScript</span>
+            <span class="badge" data-tech="PHP">PHP</span>
           </div>
         </div>
-        <p>
-          <strong>Problem:</strong> People struggle to decide what to cook with existing ingredients.<br>
-          <strong>Solution:</strong> Built a web app recommending recipes based on user inputs.<br>
-          <strong>Achievement:</strong> Interactive and lightweight system with live demo.
-        </p>
+
+        <!-- Details -->
+        <ul class="project-details">
+          <li><strong>📌 Problem:</strong> People struggle to decide what to cook with existing ingredients.</li>
+          <li><strong>💡 Solution:</strong> Built a web app recommending recipes based on user inputs.</li>
+          <li><strong>🏆 Achievement:</strong> Interactive and lightweight system with live demo.</li>
+          <li><strong>👩‍💻 Role:</strong> Full-stack Developer (frontend + backend).</li>
+        </ul>
+
+        <!-- Links -->
         <div class="links">
           <a class="btn small" href="https://github.com/Mitra-Keya/recipe-recommender" target="_blank" rel="noopener">GitHub</a>
           <a class="btn small outline" href="https://mitra-keya.github.io/recipe-recommender/" target="_blank" rel="noopener">Live Demo</a>
+          <button class="btn small video-toggle">▶ Watch Demo</button>
         </div>
-        <div class="video-container">
+
+        <!-- Video -->
+        <div class="video-container hidden">
           <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_1"
             title="Recipe Recommender Demo"
             aria-label="Video demo of Recipe Recommender project"
@@ -259,24 +273,39 @@
 
       <!-- Project 2 -->
       <article class="project-card fade-in">
-        <img src="assets/images/project2-thumb.png" alt="Breast Mammogram Report Generation Screenshot" class="project-thumb">
+        <!-- Thumbnail -->
+        <img src="assets/images/project2-thumb.png" alt="Breast Mammogram Report Generation Screenshot"
+          class="project-thumb" loading="lazy">
+
+        <!-- Header -->
         <div class="project-header">
           <h3>Breast Mammogram Report Generation (ResNet50 + LSTM)</h3>
           <div class="badges">
-            <span class="badge">Python</span><span class="badge">PyTorch</span>
-            <span class="badge">ResNet50</span><span class="badge">LSTM</span><span class="badge">GloVe</span>
+            <span class="badge" data-tech="Python">Python</span>
+            <span class="badge" data-tech="PyTorch">PyTorch</span>
+            <span class="badge" data-tech="ResNet50">ResNet50</span>
+            <span class="badge" data-tech="LSTM">LSTM</span>
+            <span class="badge" data-tech="GloVe">GloVe</span>
           </div>
         </div>
-        <p>
-          <strong>Problem:</strong> Radiologists spend long hours analyzing mammograms.<br>
-          <strong>Solution:</strong> ResNet50 for images + LSTM with GloVe for report generation. Grad-CAM used for explainability.<br>
-          <strong>Achievement:</strong> Outperformed ViT+GPT2 and BEiT+T5 baselines.
-        </p>
+
+        <!-- Details -->
+        <ul class="project-details">
+          <li><strong>📌 Problem:</strong> Radiologists spend long hours analyzing mammograms.</li>
+          <li><strong>💡 Solution:</strong> ResNet50 for images + LSTM with GloVe for report generation. Grad-CAM used for explainability.</li>
+          <li><strong>🏆 Achievement:</strong> Outperformed ViT+GPT2 and BEiT+T5 baselines.</li>
+          <li><strong>👩‍💻 Role:</strong> Machine Learning Engineer (model design & deployment).</li>
+        </ul>
+
+        <!-- Links -->
         <div class="links">
           <a class="btn small" href="https://github.com/Mitra-Keya/streamlit-mammo-app1.git" target="_blank" rel="noopener">GitHub</a>
           <a class="btn small outline" href="https://app-mammo-app1-twbf42rwcmwplgcrufmowu.streamlit.app/" target="_blank" rel="noopener">Live Demo</a>
+          <button class="btn small video-toggle">▶ Watch Demo</button>
         </div>
-        <div class="video-container">
+
+        <!-- Video -->
+        <div class="video-container hidden">
           <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_2"
             title="Mammogram Report Generation Demo"
             aria-label="Video demo of Mammogram Report Generation project"
@@ -286,25 +315,40 @@
 
       <!-- Project 3 -->
       <article class="project-card fade-in">
-        <img src="assets/images/project3-thumb.png" alt="Breast Cancer Detection Screenshot" class="project-thumb">
+        <!-- Thumbnail -->
+        <img src="assets/images/project3-thumb.png" alt="Breast Cancer Detection Screenshot"
+          class="project-thumb" loading="lazy">
+
+        <!-- Header -->
         <div class="project-header">
           <h3>Breast Cancer Detection — Ultrasound Images</h3>
           <div class="badges">
-            <span class="badge">Python</span><span class="badge">TensorFlow</span>
-            <span class="badge">Keras</span><span class="badge">ResNet50</span>
-            <span class="badge">VGG16</span><span class="badge">CNN</span>
+            <span class="badge" data-tech="Python">Python</span>
+            <span class="badge" data-tech="TensorFlow">TensorFlow</span>
+            <span class="badge" data-tech="Keras">Keras</span>
+            <span class="badge" data-tech="ResNet50">ResNet50</span>
+            <span class="badge" data-tech="VGG16">VGG16</span>
+            <span class="badge" data-tech="CNN">CNN</span>
           </div>
         </div>
-        <p>
-          <strong>Problem:</strong> Early breast cancer detection from noisy ultrasound images.<br>
-          <strong>Solution:</strong> Trained CNN, ResNet50, VGG16 for benign/malignant/normal classification.<br>
-          <strong>Achievement:</strong> F1 ≈ 0.80, ROC AUC ≈ 0.91.
-        </p>
+
+        <!-- Details -->
+        <ul class="project-details">
+          <li><strong>📌 Problem:</strong> Early breast cancer detection from noisy ultrasound images.</li>
+          <li><strong>💡 Solution:</strong> Trained CNN, ResNet50, VGG16 for benign/malignant/normal classification.</li>
+          <li><strong>🏆 Achievement:</strong> F1 ≈ 0.80, ROC AUC ≈ 0.91.</li>
+          <li><strong>👩‍💻 Role:</strong> Deep Learning Researcher (model training & evaluation).</li>
+        </ul>
+
+        <!-- Links -->
         <div class="links">
           <a class="btn small" href="https://github.com/Mitra-Keya/breast-us-detection" target="_blank" rel="noopener">GitHub</a>
           <a class="btn small outline" href="https://mitra-keya.github.io/breast-us-detection/" target="_blank" rel="noopener">Live Demo</a>
+          <button class="btn small video-toggle">▶ Watch Demo</button>
         </div>
-        <div class="video-container">
+
+        <!-- Video -->
+        <div class="video-container hidden">
           <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_3"
             title="Breast Cancer Detection Demo"
             aria-label="Video demo of Breast Cancer Detection project"
@@ -313,74 +357,45 @@
       </article>
 
       <!-- Project 4 -->
-      <!-- <article class="project-card fade-in">
-        <img src="assets/images/project4-thumb.png" alt="Portfolio Website Screenshot" class="project-thumb">
+      <article class="project-card fade-in">
+        <!-- Thumbnail -->
+        <img src="assets/images/project4-thumb.png" alt="Portfolio Website Screenshot"
+          class="project-thumb" loading="lazy">
+
+        <!-- Header -->
         <div class="project-header">
           <h3>Personal Portfolio Website</h3>
           <div class="badges">
-            <span class="badge">HTML</span><span class="badge">CSS</span>
-            <span class="badge">JavaScript</span><span class="badge">Responsive Design</span>
+            <span class="badge" data-tech="HTML">HTML</span>
+            <span class="badge" data-tech="CSS">CSS</span>
+            <span class="badge" data-tech="JavaScript">JavaScript</span>
+            <span class="badge" data-tech="Responsive">Responsive Design</span>
           </div>
         </div>
-        <p>
-          <strong>Problem:</strong> Needed a professional online presence.<br>
-          <strong>Solution:</strong> Fully responsive portfolio website with project demos, resume download, and theme toggle.<br>
-          <strong>Achievement:</strong> Engaging, recruiter-friendly platform.
-        </p>
+
+        <!-- Details -->
+        <ul class="project-details">
+          <li><strong>📌 Problem:</strong> Needed a professional online presence.</li>
+          <li><strong>💡 Solution:</strong> Fully responsive site with project demos, resume download, and theme toggle.</li>
+          <li><strong>🏆 Achievement:</strong> Engaging, recruiter-friendly platform with 100+ visitors/month.</li>
+          <li><strong>👩‍💻 Role:</strong> Designer & Developer (end-to-end).</li>
+        </ul>
+
+        <!-- Links -->
         <div class="links">
           <a class="btn small" href="https://github.com/Mitra-Keya/portfolio-website.git" target="_blank" rel="noopener">GitHub</a>
           <a class="btn small outline" href="https://mitra-keya.github.io/portfolio-website/" target="_blank" rel="noopener">Live Demo</a>
+          <button class="btn small video-toggle">▶ Watch Demo</button>
         </div>
-        <div class="video-container">
+
+        <!-- Video -->
+        <div class="video-container hidden">
           <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_4"
             title="Portfolio Website Demo"
             aria-label="Video demo of Portfolio Website project"
             frameborder="0" allowfullscreen loading="lazy"></iframe>
         </div>
-      </article> -->
-      <!-- Project 4 -->
-        <article class="project-card fade-in">
-        <!-- Thumbnail -->
-        <img src="assets/images/project4-thumb.png" alt="Portfolio Website Screenshot"
-            class="project-thumb" loading="lazy">
-
-        <!-- Header -->
-        <div class="project-header">
-            <h3>Personal Portfolio Website</h3>
-            <div class="badges">
-            <span class="badge" data-tech="HTML">HTML</span>
-            <span class="badge" data-tech="CSS">CSS</span>
-            <span class="badge" data-tech="JavaScript">JavaScript</span>
-            <span class="badge" data-tech="Responsive">Responsive Design</span>
-            </div>
-        </div>
-
-        <!-- Details -->
-        <ul class="project-details">
-            <li><strong>📌 Problem:</strong> Needed a professional online presence.</li>
-            <li><strong>💡 Solution:</strong> Fully responsive site with project demos, resume download, and theme toggle.</li>
-            <li><strong>🏆 Achievement:</strong> Engaging, recruiter-friendly platform with 100+ visitors/month.</li>
-            <li><strong>👩‍💻 Role:</strong> Designer & Developer (end-to-end).</li>
-        </ul>
-
-        <!-- Links -->
-        <div class="links">
-            <a class="btn small" href="https://github.com/Mitra-Keya/portfolio-website.git" 
-            target="_blank" rel="noopener">GitHub</a>
-            <a class="btn small outline" href="https://mitra-keya.github.io/portfolio-website/" 
-            target="_blank" rel="noopener">Live Demo</a>
-            <button class="btn small video-toggle">▶ Watch Demo</button>
-        </div>
-
-        <!-- Video (hidden by default, revealed on button click) -->
-        <div class="video-container hidden">
-            <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_4"
-            title="Portfolio Website Demo"
-            aria-label="Video demo of Portfolio Website project"
-            frameborder="0" allowfullscreen loading="lazy"></iframe>
-        </div>
-        </article>
-
+      </article>
     </section>
 
     <!-- Achievements Section -->
