@@ -480,18 +480,188 @@ body {
 /* ==========================
    Responsive
 ========================== */
-@media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; }
+/* ==========================
+   Base Hero Section
+========================== */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* text left, image right */
+  gap: 2rem;
+  /* align-items: center; */
 }
+
+.quick-info {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.quick-info i {
+  width: 1.1rem;
+}
+
+/* ==========================
+   Responsive Enhancements
+========================== */
+
+/* ==========================
+   Base Hero Section
+========================== */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* text left, image right */
+  gap: 2rem;
+}
+
+.quick-info {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.quick-info i {
+  width: 1.1rem;
+}
+
+/* ==========================
+   Responsive Enhancements
+========================== */
+
+/* ==========================
+   Base Hero Section
+========================== */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* text left, image right */
+  gap: 2rem;
+}
+
+.quick-info {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.quick-info i {
+  width: 1.1rem;
+}
+
+/* ==========================
+   Responsive Enhancements
+========================== */
+
+/* ======= Medium screens (1024px and below) ======= */
+@media (max-width: 1024px) {
+  /* Navbar adjustments */
+  .site-header { padding: 0.6rem 1.2rem; }
+  .brand { font-size: 1.2rem; }
+  .nav { gap: 1rem; }
+  .menu-toggle { display: flex; }
+
+  .nav-links {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    display: none;
+    padding: 0.5rem 0;
+    gap: 0;
+    z-index: 999;
+  }
+  .nav-links.show { display: flex; }
+  .nav-links a { padding: 0.8rem 1.2rem; width: 100%; text-align: center; }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .controls .btn.small {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .theme-toggle i { font-size: 1rem; }
+}
+
+/* ======= Small laptops / tablets (900px and below) ======= */
+@media (max-width: 900px) {
+  .hero-inner { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem; 
+  }
+
+  .profile-pic { width: 200px; height: 200px; }
+  .section-title { font-size: 1.9rem; }
+
+  /* Quick info */
+  .quick-info {
+    grid-template-columns: 1fr; 
+    text-align: left; 
+    gap: 0.35rem; 
+    font-size: 1rem; 
+  }
+  .quick-info li { white-space: normal; word-break: break-word; }
+  .quick-info i { width: 1rem; font-size: 1rem; }
+}
+
+/* ======= Tablets / Large Phones (768px and below) ======= */
+/* ======= Tablets / Large Phones (768px and below) ======= */
 @media (max-width: 768px) {
   .hero-inner {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
+    gap: 1.5rem;
   }
-  .hero-art { margin-bottom: 1rem; }
+
+  .hero-text h1 { font-size: 2rem; }
+  .subtitle { font-size: 1rem; }
+  .summary { max-width: 100%; font-size: 0.95rem; }
+  .hero-cta { justify-content: center; }
+
+  /* Quick info - always single column */
+  .quick-info {
+    grid-template-columns: 1fr;   /* always single column */
+    text-align: center;           /* center the text */
+    gap: 0.5rem;                  /* spacing between items */
+    font-size: 1rem;
+    justify-content: center;      /* center the grid content */
+    }
+
+    .quick-info li {
+    white-space: normal;          /* prevent text staying in one line */
+    word-break: break-word;       /* break long words properly */
+    }
+
+    .quick-info i {
+    width: 1rem;                  /* icon size */
+    font-size: 1rem;              /* match text size */
+    }
+
+  .project-header { flex-direction: column; align-items: flex-start; }
+  .links { justify-content: center; }
+  .chip { font-size: 0.85rem; padding: 8px; }
+  .skill-icon { width: 28px; height: 28px; }
+
+  .section { padding: 3rem 1rem; }
+  .section-title { font-size: 1.6rem; }
+  body { font-size: 0.95rem; }
+  .btn { font-size: 0.9rem; padding: 0.5rem 0.8rem; }
 }
+
+
+/* ======= Mobile Navigation (760px and below) ======= */
 @media (max-width: 760px) {
   .menu-toggle { display: flex; }
   .nav-links {
@@ -507,13 +677,127 @@ body {
     gap: 0;
   }
   .nav-links.show { display: flex; }
-  .nav-links a { padding: 0.8rem 1.2rem; width: 100%; }
+  .nav-links a { padding: 0.8rem 1.2rem; width: 100%; text-align: center; }
   .controls .btn.small { display: none; }
 }
+
+/* ======= Small Phones (600px and below) ======= */
 @media (max-width: 600px) {
-  .contact-form { padding: 1.2rem; border-radius: 0.75rem; }
+  body { font-size: 0.9rem; }
+  .site-header { padding: 0.6rem 1rem; }
+  .brand { font-size: 1.2rem; }
+
+  /* Hero adjustments */
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .hero-art { order: -1; margin-bottom: 0; }
+  .hero-text { width: 100%; font-size: 0.95rem; }
+  .hero-cta a.btn { width: 100%; text-align: center; }
+  .profile-pic { width: 180px; height: 180px; }
+
+  /* Quick info stacking */
+  .quick-info {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+  .quick-info li { white-space: normal; word-break: break-word; }
+  .quick-info i { width: 0.9rem; font-size: 0.9rem; }
+
+  /* Contact form adjustments */
+  .contact-form { padding: 1rem; border-radius: 0.6rem; }
   .contact-form input,
-  .contact-form textarea { font-size: 0.95rem; padding: 0.7rem 0.9rem; }
-  .contact-form button { font-size: 1rem; padding: 0.8rem 1rem; }
-  .floating-resume-btn { padding: 10px 14px; font-size: 13px; }
+  .contact-form textarea { font-size: 0.9rem; padding: 0.65rem 0.8rem; }
+  .contact-form button { font-size: 0.95rem; padding: 0.75rem 1rem; }
+
+  /* Project cards and badges */
+  .project-card { padding: 1rem; }
+  .badge { font-size: 0.7rem; padding: 0.2rem 0.4rem; }
+  .links { flex-direction: column; align-items: center; gap: 0.6rem; }
+  .btn, .btn.small, .video-toggle { width: 100%; text-align: center; }
+
+  /* Section spacing */
+  section { padding: 2rem 1rem; margin-bottom: 2rem; }
+  .section-title { margin-bottom: 1.2rem; }
+
+  .project-card,
+  .about,
+  .skills,
+  .contact-form { margin-bottom: 1.8rem; }
+
+  /* Floating buttons adjustments */
+  .floating-resume-btn,
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 8px 12px;
+    z-index: 1000;
+  }
+  .floating-resume-btn { right: 70px; }
+  #scrollTopBtn { right: 15px; }
+}
+
+/* ======= Extra Small Phones (480px and below) ======= */
+@media (max-width: 480px) {
+  body { font-size: 0.9rem; }
+  .section-title { font-size: 1.4rem; }
+  .hero-text h1 { font-size: 1.6rem; }
+  .subtitle { font-size: 0.9rem; }
+  .btn { font-size: 0.85rem; padding: 0.45rem 0.7rem; }
+
+  .section { padding: 2rem 1rem; } /* tighter spacing */
+}
+/* ==========================
+   Floating Resume Button
+========================== */
+.floating-resume-btn {
+  position: fixed;
+  bottom: 25px;           /* distance from bottom */
+  right: 80px;            /* shift it slightly left of scroll button */
+  padding: 10px 16px;     /* comfortable padding */
+  font-size: 14px;        /* slightly larger text */
+  background-color: #ff5722; /* unique color to stand out */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover effect */
+.floating-resume-btn:hover {
+  transform: translateY(-2px);
+  background-color: #e64a19;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .floating-resume-btn {
+    right: 70px;  /* ensure not overlapping scroll button */
+    bottom: 20px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Scroll to top button remains right side */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 30px;
+  z-index: 1000;
 }
