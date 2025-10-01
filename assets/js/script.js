@@ -125,3 +125,70 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+let slideIndex = 0;
+let autoSlide;
+let lightboxIndex = 0;
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n !== undefined) slideIndex = n - 1;
+  else slideIndex++;
+
+  if (slideIndex >= slides.length) slideIndex = 0;
+  if (slideIndex < 0) slideIndex = slides.length - 1;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex].style.display = "block";
+  dots[slideIndex].className += " active";
+}
+
+function plusSlides(n) { showSlides(slideIndex + n + 1); }
+function currentSlide(n) { showSlides(n); }
+
+function startAutoSlide() { autoSlide = setInterval(() => showSlides(), 4000); }
+function stopAutoSlide() { clearInterval(autoSlide); }
+
+showSlides();
+startAutoSlide();
+document.querySelector(".slideshow-container").addEventListener("mouseenter", stopAutoSlide);
+document.querySelector(".slideshow-container").addEventListener("mouseleave", startAutoSlide);
+
+/* Lightbox Functions */
+function openLightbox(n) {
+  lightboxIndex = n - 1;
+  document.getElementById("lightbox").style.display = "block";
+  showLightbox();
+}
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+function changeLightbox(n) {
+  lightboxIndex += n;
+  showLightbox();
+}
+function showLightbox() {
+  let slides = document.querySelectorAll(".slide img");
+  let captions = document.querySelectorAll(".caption");
+
+  if (lightboxIndex >= slides.length) lightboxIndex = 0;
+  if (lightboxIndex < 0) lightboxIndex = slides.length - 1;
+
+  let img = document.getElementById("lightbox-img");
+  let caption = document.getElementById("lightbox-caption");
+
+  img.src = slides[lightboxIndex].src;
+  caption.innerHTML = captions[lightboxIndex].innerText;
+}
+// Example JS for toggle
+document.querySelector("#theme-toggle").addEventListener("click", () => {
+  const body = document.body;
+  body.dataset.theme = body.dataset.theme === "dark" ? "light" : "dark";
+});
