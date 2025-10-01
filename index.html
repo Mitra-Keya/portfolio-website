@@ -232,9 +232,9 @@
 
       <!-- Project 1 -->
       <article class="project-card fade-in">
-        <!-- Thumbnail -->
+        <!-- Thumbnail
         <img src="assets/images/project1-thumb.png" alt="Recipe Recommender Screenshot"
-          class="project-thumb" loading="lazy">
+          class="project-thumb" loading="lazy"> -->
 
         <!-- Header -->
         <div class="project-header">
@@ -255,27 +255,75 @@
           <li><strong>👩‍💻 Role:</strong> Full-stack Developer (frontend + backend).</li>
         </ul>
 
-        <!-- Links -->
+        <!-- Links
         <div class="links">
           <a class="btn small" href="https://github.com/Mitra-Keya/recipe-recommender" target="_blank" rel="noopener">GitHub</a>
           <a class="btn small outline" href="https://mitra-keya.github.io/recipe-recommender/" target="_blank" rel="noopener">Live Demo</a>
           <button class="btn small video-toggle">▶ Watch Demo</button>
-        </div>
+        </div> -->
 
-        <!-- Video -->
+        <!-- Video
         <div class="video-container hidden">
           <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_1"
             title="Recipe Recommender Demo"
             aria-label="Video demo of Recipe Recommender project"
             frameborder="0" allowfullscreen loading="lazy"></iframe>
-        </div>
+        </div> -->
       </article>
 
-      <!-- Project 2 -->
+      <!-- Project 2 -->  
       <article class="project-card fade-in">
-        <!-- Thumbnail -->
-        <img src="assets/images/project2-thumb.png" alt="Breast Mammogram Report Generation Screenshot"
-          class="project-thumb" loading="lazy">
+
+        <div class="slideshow-container">
+
+          <!-- Slide 1 -->
+          <div class="slide fade">
+            <img src="assets/images/mammo_upload.png" alt="Upload Mammogram Screenshot" onclick="openLightbox(1)">
+            <div class="caption">Step 1: Upload Mammogram</div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide fade">
+            <img src="assets/images/patient_info.png" alt="Patient Info Screenshot" onclick="openLightbox(2)">
+            <div class="caption">Step 2: Enter Patient Info</div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide fade">
+            <img src="assets/images/generated_report.png" alt="Generated Report Screenshot" onclick="openLightbox(3)">
+            <div class="caption">Step 3: Generate Report</div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide fade">
+            <img src="assets/images/image_visualization.png" alt="GradCAM Visualization Screenshot" onclick="openLightbox(4)">
+            <div class="caption">Step 4: GradCAM Visualization</div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <!-- Dots -->
+        <div class="dots-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <!-- Fullscreen Lightbox -->
+        <div id="lightbox" class="lightbox">
+          <span class="close" onclick="closeLightbox()">&times;</span>
+          <div class="lightbox-content">
+            <img id="lightbox-img" src="">
+            <div id="lightbox-caption"></div>
+          </div>
+          <a class="prev" onclick="changeLightbox(-1)">❮</a>
+          <a class="next" onclick="changeLightbox(1)">❯</a>
+        </div>
+
 
         <!-- Header -->
         <div class="project-header">
@@ -301,23 +349,24 @@
         <div class="links">
           <a class="btn small" href="https://github.com/Mitra-Keya/streamlit-mammo-app1.git" target="_blank" rel="noopener">GitHub</a>
           <a class="btn small outline" href="https://app-mammo-app1-twbf42rwcmwplgcrufmowu.streamlit.app/" target="_blank" rel="noopener">Live Demo</a>
-          <button class="btn small video-toggle">▶ Watch Demo</button>
+          <!-- <button class="btn small video-toggle">▶ Watch Demo</button> -->
         </div>
 
-        <!-- Video -->
+        <!-- Video
         <div class="video-container hidden">
           <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_2"
             title="Mammogram Report Generation Demo"
             aria-label="Video demo of Mammogram Report Generation project"
             frameborder="0" allowfullscreen loading="lazy"></iframe>
-        </div>
+        </div> -->
       </article>
+
 
       <!-- Project 3 -->
       <article class="project-card fade-in">
         <!-- Thumbnail -->
-        <img src="assets/images/project3-thumb.png" alt="Breast Cancer Detection Screenshot"
-          class="project-thumb" loading="lazy">
+        <!-- <img src="assets/images/project3-thumb.png" alt="Breast Cancer Detection Screenshot"
+          class="project-thumb" loading="lazy"> -->
 
         <!-- Header -->
         <div class="project-header">
@@ -340,26 +389,26 @@
           <li><strong>👩‍💻 Role:</strong> Deep Learning Researcher (model training & evaluation).</li>
         </ul>
 
-        <!-- Links -->
+        <!-- Links
         <div class="links">
           <a class="btn small" href="https://github.com/Mitra-Keya/breast-us-detection" target="_blank" rel="noopener">GitHub</a>
           <a class="btn small outline" href="https://mitra-keya.github.io/breast-us-detection/" target="_blank" rel="noopener">Live Demo</a>
           <button class="btn small video-toggle">▶ Watch Demo</button>
-        </div>
+        </div> -->
 
-        <!-- Video -->
+        <!-- Video
         <div class="video-container hidden">
           <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_3"
             title="Breast Cancer Detection Demo"
             aria-label="Video demo of Breast Cancer Detection project"
             frameborder="0" allowfullscreen loading="lazy"></iframe>
-        </div>
+        </div> -->
       </article>
 
       <!-- Project 4 -->
       <article class="project-card fade-in">
         <!-- Thumbnail -->
-        <img src="assets/images/project4-thumb.png" alt="Portfolio Website Screenshot"
+        <img src="assets/images/portfolio_all-devices-white.png" alt="Portfolio Website Screenshot"
           class="project-thumb" loading="lazy">
 
         <!-- Header -->
@@ -385,16 +434,16 @@
         <div class="links">
           <a class="btn small" href="https://github.com/Mitra-Keya/portfolio-website.git" target="_blank" rel="noopener">GitHub</a>
           <a class="btn small outline" href="https://mitra-keya.github.io/portfolio-website/" target="_blank" rel="noopener">Live Demo</a>
-          <button class="btn small video-toggle">▶ Watch Demo</button>
+          <!-- <button class="btn small video-toggle">▶ Watch Demo</button> -->
         </div>
 
-        <!-- Video -->
+        <!-- Video
         <div class="video-container hidden">
           <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_4"
             title="Portfolio Website Demo"
             aria-label="Video demo of Portfolio Website project"
             frameborder="0" allowfullscreen loading="lazy"></iframe>
-        </div>
+        </div> -->
       </article>
     </section>
 
@@ -447,7 +496,7 @@
 
   <!-- Footer -->
   <footer class="site-footer fade-in">
-    <p>© <span id="year"></span> Keya Mitra • Built with HTML, CSS & JavaScript • <a href="LICENSE">MIT License</a></p>
+    <p>© <span id="year"></span> Keya Mitra • Built with HTML, CSS & JavaScript • All Rights Reserved</p>
   </footer>
 
   <!-- Scroll to Top Button -->
